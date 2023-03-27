@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const abc = () => {
+      let number1 = []
+
+      for (let i = 0; i < 6; i++) {
+        const num = Math.round(Math.random() * 38)
+        if (number1.includes(num)) { i-- } else { number1.push(num) }
+      }
+
+
+
+      number1.sort((a, b) => {
+        return a - b
+      })
+      document.write(`A區` + number1 + `<br>`)
+      document.write(`B區` + Math.round(Math.random() * 8) + `<br>`)
+    }
+    abc() 
+  </script>
+</body>
+
+</html>
